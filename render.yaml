@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: weather-backend
+    env: python
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    plan: free
+    envVars:
+      - key: OPENWEATHER_API_KEY
+        value: 2266bbef2f88c59fc651093ef4f54447
