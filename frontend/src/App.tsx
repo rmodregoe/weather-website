@@ -7,7 +7,8 @@ function App() {
 
   const fetchWeather = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/weather?city=${city}`);
+      const response = await axios.get(`https://weather-backend-fyl8.onrender.com/weather?city=${city}`);
+
       setWeather(response.data);
     } catch (error) {
       setWeather({ error: "City not found or backend issue." });
